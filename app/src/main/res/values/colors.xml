@@ -5,4 +5,8 @@
     <color name="colorAccent">#D81B60</color>
     <color name="colorblu">#0000FF</color>
     <color name="colorviola">#800080</color>
+    <color name="colorbluedark">#2f333f</color>
+    <color name="colorblulight">#49acd5</color>
+    <color name="colorgreen">#45bc62</color>
+    <color name="colororange">#eaad43</color>
 </resources>

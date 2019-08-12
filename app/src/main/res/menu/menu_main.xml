@@ -16,8 +16,15 @@
         app:showAsAction="never" />
 
     <item
+        android:id="@+id/contact"
+        android:orderInCategory="100"
+        android:title="CONTACT"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/sharecc"
         android:orderInCategory="100"
         android:title="SHARE"
         app:showAsAction="never" />
+
 </menu>

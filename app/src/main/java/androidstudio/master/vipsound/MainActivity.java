@@ -90,6 +90,12 @@ public class MainActivity extends AppCompatActivity {
             return false;
         }
 
+        if (id == R.id.contact) {
+            Intent info = new Intent(MainActivity.this,contact.class);
+            startActivity(info);
+            return false;
+        }
+
         if (id == R.id.sharecc) {
             Intent share = new Intent(Intent.ACTION_SEND);
             share.setType("text/plain");
