@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">VIP SOUND</string>
+    <string name="action_settings">by. Master</string>
+    <string name="title_activity_animali">ANIMALI</string>
+    <string name="title_activity_giochi">GIOCHI</string>
+    <string name="title_activity_cartoni">CARTONI</string>
+    <string name="title_activity_info">INFO</string>
+    <string name="title_activity_informazioni">INFO</string>
+</resources>

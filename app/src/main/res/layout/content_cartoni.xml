@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".cartoni"
+    tools:showIn="@layout/activity_cartoni">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="315dp"
+                android:layout_height="93dp"
+                android:layout_marginStart="46dp"
+                android:layout_marginLeft="46dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="52dp"
+                android:layout_marginRight="52dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/cartoni" />
+
+            <Button
+                android:id="@+id/home"
+                android:layout_width="374dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="11dp"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="11dp"
+                android:layout_marginRight="11dp"
+                android:text="HOME"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+            <ImageButton
+                android:id="@+id/spongebob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="20dp"
+                android:background="#00FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home"
+                app:srcCompat="@drawable/spongebob" />
+
+            <ImageButton
+                android:id="@+id/superman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:background="#00FFFFFF"
+                app:layout_constraintEnd_toStartOf="@+id/paperino"
+                app:layout_constraintStart_toEndOf="@+id/spongebob"
+                app:layout_constraintTop_toBottomOf="@+id/home"
+                app:srcCompat="@drawable/superman" />
+
+            <ImageButton
+                android:id="@+id/paperino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginRight="28dp"
+                android:background="#00FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home"
+                app:srcCompat="@drawable/paperino" />
+
+            <ImageButton
+                android:id="@+id/topolino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="22dp"
+                android:background="#00FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spongebob"
+                app:srcCompat="@drawable/topolino" />
+
+            <ImageButton
+                android:id="@+id/topolina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:background="#00FFFFFF"
+                app:layout_constraintEnd_toStartOf="@+id/homer"
+                app:layout_constraintStart_toEndOf="@+id/topolino"
+                app:layout_constraintTop_toBottomOf="@+id/superman"
+                app:srcCompat="@drawable/topolina" />
+
+            <ImageButton
+                android:id="@+id/homer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginRight="28dp"
+                android:background="#00FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/paperino"
+                app:srcCompat="@drawable/homer" />
+
+            <ImageButton
+                android:id="@+id/marge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="22dp"
+                android:background="#00FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topolino"
+                app:srcCompat="@drawable/marge" />
+
+            <ImageButton
+                android:id="@+id/batman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:background="#00FFFFFF"
+                app:layout_constraintEnd_toStartOf="@+id/capitanamerica"
+                app:layout_constraintStart_toEndOf="@+id/marge"
+                app:layout_constraintTop_toBottomOf="@+id/topolina"
+                app:srcCompat="@drawable/batman" />
+
+            <ImageButton
+                android:id="@+id/capitanamerica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginRight="28dp"
+                android:background="#00FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/homer"
+                app:srcCompat="@drawable/capitanamerica" />
+
+            <ImageButton
+                android:id="@+id/lisa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="22dp"
+                android:background="#00FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/marge"
+                app:srcCompat="@drawable/lisa" />
+
+            <ImageButton
+                android:id="@+id/peter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:background="#00FFFFFF"
+                app:layout_constraintEnd_toStartOf="@+id/peterpan"
+                app:layout_constraintStart_toEndOf="@+id/lisa"
+                app:layout_constraintTop_toBottomOf="@+id/batman"
+                app:srcCompat="@drawable/peter" />
+
+            <ImageButton
+                android:id="@+id/peterpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginRight="28dp"
+                android:background="#00FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/capitanamerica"
+                app:srcCompat="@drawable/peterpan" />
+
+            <ImageButton
+                android:id="@+id/cogu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="22dp"
+                android:background="#00FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lisa"
+                app:srcCompat="@drawable/cogu" />
+
+            <ImageButton
+                android:id="@+id/scoobydoo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:background="#00FFFFFF"
+                app:layout_constraintEnd_toStartOf="@+id/leoneilcanefifone"
+                app:layout_constraintStart_toEndOf="@+id/cogu"
+                app:layout_constraintTop_toBottomOf="@+id/peter"
+                app:srcCompat="@drawable/scobydoo" />
+
+            <ImageButton
+                android:id="@+id/leoneilcanefifone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginRight="28dp"
+                android:background="#00FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/peterpan"
+                app:srcCompat="@drawable/leoneilcane" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

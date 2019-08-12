@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="androidstudio.master.vipsound.MainActivity">
+
+    <item
+        android:id="@+id/master"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/infocc"
+        android:orderInCategory="100"
+        android:title="INFO"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/sharecc"
+        android:orderInCategory="100"
+        android:title="SHARE"
+        app:showAsAction="never" />
+</menu>
