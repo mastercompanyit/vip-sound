@@ -128,7 +128,7 @@
                 android:layout_marginRight="9dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView10"
-                app:srcCompat="@drawable/mastercompanyyyy" />
+                app:srcCompat="@drawable/mastercompany" />
 
             <TextView
                 android:id="@+id/textView2"
