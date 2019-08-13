@@ -12,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.service.chooser.ChooserTarget;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -35,9 +37,9 @@ public class contact extends AppCompatActivity {
         setContentView(R.layout.content_contact);
         myDialogemail = new Dialog(this);
 
-        Button home = findViewById(R.id.home);
+        Button home = findViewById(R.id.home5);
 
-        final MediaPlayer sound3 = MediaPlayer.create(this,R.raw.home3);
+        final MediaPlayer sound3 = MediaPlayer.create(this,R.raw.home5);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,6 +49,7 @@ public class contact extends AppCompatActivity {
             }
         });
     }
+
     public void ShowPopup (View v) {
         Log.i("ShowPopup", "Begin");
         TextView textclose;
@@ -114,6 +117,16 @@ public class contact extends AppCompatActivity {
         });
         myDialogemail.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         myDialogemail.show();
+    }
+
+    public void SendEmail (View view) {
+        /*Intent openemail = new Intent(contact.this,email.class);
+        startActivity(openemail);*/
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                "mailto","mastercompani2019@gmail.com", null));
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "motivazione dell'email");
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "Messaggio: (idee, assistenza o problematiche)");
+        startActivity(Intent.createChooser(emailIntent, "Send email..."));
     }
 
 }

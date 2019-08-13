@@ -42,7 +42,7 @@
 
     <Button
         android:id="@+id/btnfollow2"
-        android:onClick="Send"
+        android:onClick="SendEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"

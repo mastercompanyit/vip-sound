@@ -7,4 +7,5 @@
     <string name="title_activity_info">INFO</string>
     <string name="title_activity_informazioni">INFO</string>
     <string name="title_activity_contact">CONTACT</string>
+    <string name="title_activity_email">email</string>
 </resources>

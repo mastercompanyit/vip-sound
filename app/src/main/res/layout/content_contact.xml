@@ -4,68 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bananesfondo"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".contact"
     tools:showIn="@layout/activity_contact">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="110dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/home"
+                android:id="@+id/home5"
                 android:layout_width="384dp"
                 android:layout_height="42dp"
                 android:layout_marginStart="11dp"
                 android:layout_marginLeft="11dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="32dp"
                 android:layout_marginEnd="11dp"
                 android:layout_marginRight="11dp"
                 android:text="HOME"
+                android:background="@color/colorgreen"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
                 android:id="@+id/imageButton"
                 android:layout_width="165dp"
                 android:layout_height="155dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="62dp"
-                android:background="@drawable/cerclebackground"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/cerclebackgroundnero"
                 android:onClick="ShowPopup"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/home"
+                app:layout_constraintTop_toBottomOf="@+id/home5"
                 app:srcCompat="@drawable/instagramicona" />
 
             <ImageButton
                 android:id="@+id/imageButton2"
-                android:onClick="ShowPopupYoutube"
                 android:layout_width="154dp"
                 android:layout_height="155dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
-                android:background="@drawable/cerclebackground"
+                android:background="@drawable/cerclebackgroundnero"
+                android:onClick="ShowPopupYoutube"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButton"
                 app:srcCompat="@drawable/yticon" />
 
             <ImageButton
                 android:id="@+id/imageButton4"
-                android:onClick="ShowPopupemail"
                 android:layout_width="167dp"
                 android:layout_height="156dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="18dp"
-                android:background="@drawable/cerclebackground"
+                android:background="@drawable/cerclebackgroundnero"
+                android:onClick="ShowPopupemail"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButton2"
                 app:srcCompat="@drawable/emailicona" />
