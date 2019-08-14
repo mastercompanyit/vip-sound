@@ -13,8 +13,11 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.ViewFlipper;
 
 public class cartoni extends AppCompatActivity {
+    ViewFlipper v_flipper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,17 +26,14 @@ public class cartoni extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button home = findViewById(R.id.home);
+        int image[] = {R.drawable.mastercompany,R.drawable.cartoni};
 
-        final MediaPlayer sound2 = MediaPlayer.create(this,R.raw.home2);
-        home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                sound2.start();
-                Intent openH = new Intent(cartoni.this,MainActivity.class);
-                startActivity(openH);
-            }
-        });
+        v_flipper = findViewById(R.id.v_flipper1);
+
+        for (int images: image){
+            flipperImage(images);
+
+        }
 
         ImageButton spongebob = findViewById(R.id.spongebob);
         final MediaPlayer soundC1 = MediaPlayer.create(this,R.raw.spongebob);
@@ -169,6 +169,18 @@ public class cartoni extends AppCompatActivity {
                 soundC15.start();
             }
         });
+    }
+
+    public void flipperImage(int image) {
+        ImageView imageView = new ImageView(this);
+        imageView.setBackgroundResource(image);
+
+        v_flipper.addView(imageView);
+        v_flipper.setFlipInterval(2000);
+        v_flipper.setAutoStart(true);
+
+        v_flipper.setInAnimation(this, android.R.anim.slide_in_left);
+        v_flipper.setOutAnimation(this, android.R.anim.slide_out_right);
     }
 
 }

@@ -1,7 +1,11 @@
 package androidstudio.master.vipsound;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -10,11 +14,19 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.ViewFlipper;
+
+import org.w3c.dom.Text;
 
 public class animali extends AppCompatActivity {
+    ViewFlipper v_flipper;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,17 +35,15 @@ public class animali extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button home = findViewById(R.id.home);
 
-        final MediaPlayer sound1 = MediaPlayer.create(this,R.raw.home1);
-        home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                sound1.start();
-                Intent openH = new Intent(animali.this,MainActivity.class);
-                startActivity(openH);
-            }
-        });
+        int image[] = {R.drawable.mastercompany,R.drawable.animalisfondo};
+
+        v_flipper = findViewById(R.id.v_flipper);
+
+        for (int images: image){
+            flipperImage(images);
+
+        }
 
         ImageButton gorilla = findViewById(R.id.gorilla);
         final MediaPlayer soundA1 = MediaPlayer.create(this,R.raw.gorilla);
@@ -278,6 +288,18 @@ public class animali extends AppCompatActivity {
                 soundA27.start();
             }
         });
+    }
+
+    public void flipperImage(int image) {
+        ImageView imageView = new ImageView(this);
+        imageView.setBackgroundResource(image);
+
+        v_flipper.addView(imageView);
+        v_flipper.setFlipInterval(2000);
+        v_flipper.setAutoStart(true);
+
+        v_flipper.setInAnimation(this, android.R.anim.slide_in_left);
+        v_flipper.setOutAnimation(this, android.R.anim.slide_out_right);
     }
 
 }

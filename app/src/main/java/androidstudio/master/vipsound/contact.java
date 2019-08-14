@@ -17,12 +17,17 @@ import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.ViewFlipper;
 
 public class contact extends AppCompatActivity {
     Dialog myDialogInstagram;
     Dialog myDialogYoutube;
     Dialog myDialogemail;
+    ThreadFrase thFrase;
+    ViewFlipper v_flipper;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,17 +42,17 @@ public class contact extends AppCompatActivity {
         setContentView(R.layout.content_contact);
         myDialogemail = new Dialog(this);
 
-        Button home = findViewById(R.id.home5);
+        thFrase= new ThreadFrase(this);
 
-        final MediaPlayer sound3 = MediaPlayer.create(this,R.raw.home5);
-        home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                sound3.start();
-                Intent openH = new Intent(contact.this,MainActivity.class);
-                startActivity(openH);
-            }
-        });
+        int image[] = {R.drawable.mastercompany,R.drawable.vipsoundcopertina,R.drawable.instagramcopertina, R.drawable.ytcopertina};
+
+        v_flipper = findViewById(R.id.v_flipper);
+
+        for (int images: image){
+            flipperImage(images);
+
+        }
+
     }
 
     public void ShowPopup (View v) {
@@ -68,7 +73,7 @@ public class contact extends AppCompatActivity {
         myDialogInstagram.show();
     }
     public void webinsta (View view) {
-        Intent webintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/mastercompani2019/?hl=it"));
+        Intent webintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/mastercompaniofficial/?hl=it"));
         startActivity(webintent);
     }
 
@@ -128,6 +133,19 @@ public class contact extends AppCompatActivity {
         emailIntent.putExtra(Intent.EXTRA_TEXT, "Messaggio: (idee, assistenza o problematiche)");
         startActivity(Intent.createChooser(emailIntent, "Send email..."));
     }
+
+    public void flipperImage(int image) {
+        ImageView imageView = new ImageView(this);
+        imageView.setBackgroundResource(image);
+
+        v_flipper.addView(imageView);
+        v_flipper.setFlipInterval(2000);
+        v_flipper.setAutoStart(true);
+
+        v_flipper.setInAnimation(this, android.R.anim.slide_in_left);
+        v_flipper.setOutAnimation(this, android.R.anim.slide_out_right);
+    }
+
 
 }
 

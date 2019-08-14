@@ -13,8 +13,11 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.ViewFlipper;
 
 public class giochi extends AppCompatActivity {
+    ViewFlipper v_flipper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,17 +26,14 @@ public class giochi extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button home = findViewById(R.id.home);
+        int image[] = {R.drawable.mastercompany,R.drawable.games};
 
-        final MediaPlayer sound3 = MediaPlayer.create(this,R.raw.home3);
-        home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                sound3.start();
-                Intent openH = new Intent(giochi.this,MainActivity.class);
-                startActivity(openH);
-            }
-        });
+        v_flipper = findViewById(R.id.v_flipper2);
+
+        for (int images: image){
+            flipperImage(images);
+
+        }
 
         ImageButton trevor = findViewById(R.id.trevor);
         final MediaPlayer soundG1 = MediaPlayer.create(this,R.raw.trevor);
@@ -143,7 +143,18 @@ public class giochi extends AppCompatActivity {
             }
         });
 
+    }
 
+    public void flipperImage(int image) {
+        ImageView imageView = new ImageView(this);
+        imageView.setBackgroundResource(image);
+
+        v_flipper.addView(imageView);
+        v_flipper.setFlipInterval(2000);
+        v_flipper.setAutoStart(true);
+
+        v_flipper.setInAnimation(this, android.R.anim.slide_in_left);
+        v_flipper.setOutAnimation(this, android.R.anim.slide_out_right);
     }
 
 }
